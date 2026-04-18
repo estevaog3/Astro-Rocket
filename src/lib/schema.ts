@@ -32,16 +32,7 @@ export function createPersonSchema(): WithContext<Person> {
     '@type': 'Person',
     name: 'Astro Rocket',
     jobTitle: 'Web Designer & Developer',
-    url: siteConfig.url,
-    email: siteConfig.email,
-    ...(siteConfig.authorImage ? { image: `${siteConfig.url}${siteConfig.authorImage}` } : {}),
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Veghel',
-      addressRegion: 'Noord-Brabant',
-      addressCountry: 'NL',
-    },
-    sameAs: siteConfig.socialLinks,
+    url: siteConfig.url
   };
 }
 
@@ -53,21 +44,7 @@ export function createProfessionalServiceSchema(): WithContext<LocalBusiness> {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService' as 'LocalBusiness',
     name: siteConfig.name,
-    url: siteConfig.url,
-    email: siteConfig.email,
-    ...(siteConfig.phone ? { telephone: siteConfig.phone } : {}),
-    ...(siteConfig.authorImage ? { image: `${siteConfig.url}${siteConfig.authorImage}` } : {}),
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Veghel',
-      addressRegion: 'Noord-Brabant',
-      addressCountry: 'NL',
-    },
-    areaServed: [
-      { '@type': 'Country', name: 'Netherlands' },
-      { '@type': 'Country', name: 'Worldwide' },
-    ],
-    sameAs: siteConfig.socialLinks,
+    url: siteConfig.url
   };
 }
 
@@ -81,17 +58,6 @@ export function createOrganizationSchema(): WithContext<Organization> {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: siteConfig.name,
-    url: siteConfig.url,
-    ...(logoUrl ? { logo: logoUrl } : {}),
-    sameAs: siteConfig.socialLinks,
-    contactPoint: siteConfig.phone
-      ? {
-          '@type': 'ContactPoint',
-          telephone: siteConfig.phone,
-          contactType: 'customer service',
-        }
-      : undefined,
   };
 }
 

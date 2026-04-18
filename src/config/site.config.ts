@@ -5,16 +5,6 @@ export interface SiteConfig {
   description: string;
   url: string;
   ogImage: string;
-  author: string;
-  email: string;
-  phone?: string;
-  address?: {
-    street: string;
-    city: string;
-    state: string;
-    zip: string;
-    country: string;
-  };
   socialLinks: string[];
   twitter?: {
     site: string;
@@ -63,25 +53,8 @@ const siteConfig: SiteConfig = {
     'Consultoria em processos industriais e SAP, com atuação em governança de dados mestres, estruturação de cadastros e eficiência produtiva.',
   url: SITE_URL || 'https://astrorocket.dev',
   ogImage: '/og-default.svg',
-  author: 'Hans Martens',
-  email: 'hello@hansmartens.dev',
-  address: {
-    street: '',
-    city: 'Veghel',
-    state: '',
-    zip: '',
-    country: 'the Netherlands',
-  },
   socialLinks: [
-    'https://github.com/hansmartens68/Astro-Rocket',
-    'https://x.com/hansmartens_dev',
-    'https://www.linkedin.com',
-    'https://bsky.app/profile/hansmartens-online.bsky.social',
   ],
-  twitter: {
-    site: 'https://x.com/hansmartens_dev',
-    creator: '@hansmartens_dev',
-  },
   verification: {
     google: GOOGLE_SITE_VERIFICATION,
     bing: BING_SITE_VERIFICATION,
@@ -90,12 +63,12 @@ const siteConfig: SiteConfig = {
   blogImageOverlay: true,
   branding: {
     logo: {
-      alt: 'Astro Rocket',
+      alt: 'Lorena Brandão',
       imageUrl: '/favicon.svg',
     },
     favicon: {
       svg: '/favicon.svg',
-    },
+    },Fad
     colors: {
       themeColor: '#3b82f6',
       backgroundColor: '#ffffff',
